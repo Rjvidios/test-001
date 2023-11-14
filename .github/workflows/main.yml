@@ -1,8 +1,7 @@
 name: CI
 
 on:
-  schedule:
-    - cron: '0 0 * * *'  # Run every day at midnight
+  push:
   workflow_dispatch:
 
 jobs:
