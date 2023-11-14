@@ -1,4 +1,4 @@
-name: Run Ubuntu VM with Ngrok
+name: Run Ubuntu with Ngrok
 
 on:
   push:
@@ -20,6 +20,7 @@ jobs:
     - name: Check libvirt Service Status
       run: |
         sudo systemctl status libvirtd
+        sudo journalctl -u libvirtd --no-pager
 
     - name: Check virbr0 Interface
       run: |
